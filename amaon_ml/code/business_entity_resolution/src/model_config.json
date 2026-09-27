@@ -1,0 +1,53 @@
+{
+  "best_threshold": 0.895,
+  "best_macro_f05": 0.945739575229269,
+  "best_iteration": 1000,
+  "feature_cols": [
+    "name_levenshtein",
+    "name_partial_ratio",
+    "name_token_sort_ratio",
+    "name_token_set_ratio",
+    "name_jaro_winkler",
+    "name_jaccard",
+    "name_len_ratio",
+    "addr_levenshtein",
+    "addr_token_sort_ratio",
+    "addr_token_overlap",
+    "addr_len_ratio",
+    "addr_number_match",
+    "country_exact",
+    "combined_jaccard",
+    "num_shared_blocking_keys"
+  ],
+  "feature_importance": {
+    "combined_jaccard": 20321884.26482725,
+    "num_shared_blocking_keys": 3723884.7710847855,
+    "addr_number_match": 2103093.320925474,
+    "addr_token_overlap": 1242813.585261345,
+    "name_partial_ratio": 1158801.0442931652,
+    "addr_len_ratio": 1081932.2368190289,
+    "name_jaro_winkler": 1052791.1967635155,
+    "addr_token_sort_ratio": 938497.0506014824,
+    "name_token_sort_ratio": 812216.4674367905,
+    "name_jaccard": 686225.4263525009,
+    "name_levenshtein": 617749.1028585434,
+    "name_len_ratio": 475661.3272063732,
+    "addr_levenshtein": 363463.81486201286,
+    "name_token_set_ratio": 361146.73585391045,
+    "country_exact": 0.0
+  },
+  "params": {
+    "objective": "binary",
+    "metric": "binary_logloss",
+    "boosting_type": "gbdt",
+    "num_leaves": 63,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 5,
+    "scale_pos_weight": 6.249455017809085,
+    "verbose": -1,
+    "n_jobs": -1,
+    "seed": 42
+  }
+}

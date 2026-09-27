@@ -1,0 +1,34 @@
+# ==============================================================================
+# Amazon ML Challenge 2026 — Business Entity Resolution
+# Root Project Dependencies
+# ==============================================================================
+# Python Version: >=3.10, <3.13 (Python 3.12 verified)
+#
+# These are the verified, exact third-party packages required to run the entire
+# end-to-end entity resolution pipeline (EDA, blocking/candidate generation,
+# feature engineering, model training, threshold tuning, inference, and validation).
+# Standard library modules (argparse, ctypes, math, re, json, io, gc, time,
+# sys, os, collections) are excluded.
+
+# --- Core Data Manipulation & Scientific Computing ---
+numpy>=1.26.0,<3.0.0
+pandas>=2.1.0,<3.1.0
+scipy>=1.11.0
+
+# --- String Matching & Fuzzy Distance Metrics ---
+rapidfuzz>=3.5.0
+jellyfish>=1.0.0
+
+# --- Candidate Generation (Blocking) & Nearest Neighbor Search ---
+scikit-learn>=1.3.0
+faiss-cpu>=1.7.4
+
+# --- Pairwise Matching Classifier (GBDT) ---
+lightgbm>=4.0.0
+
+# --- Terminal Progress Bar & Utilities ---
+tqdm>=4.66.0
+
+# --- Optional / Roadmap Modeling ---
+# (Installed in environment and supported for GBDT comparison in handoff roadmap)
+xgboost>=2.0.0

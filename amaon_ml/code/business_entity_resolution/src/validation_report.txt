@@ -1,0 +1,68 @@
+================================================================================
+AMAZON ML CHALLENGE 2026 — VALIDATION REPORT
+================================================================================
+
+## 1. Dataset Summary
+  Total S1 entities evaluated:   25,000
+  Singletons (no true matches):  2,130 (8.5%)
+  Matched entities:              22,870 (91.5%)
+  Total true match pairs:        72,541
+
+## 2. Blocking / Candidate Generation
+  Blocking recall:               100.0000% (72,541/72,541)
+  Avg candidates per entity:     20.99
+  Total candidate pairs:         524,822
+
+## 3. Matching Model Performance
+  *** Macro F_0.5 (official):    0.9457 ***
+  Micro precision:               0.9706
+  Micro recall:                  0.9201
+  Total TP: 66,746  FP: 2,021  FN: 5,795
+
+## 4. Singleton Performance
+  Singletons correctly empty:    1,938 / 2,130 (91.0%)
+  Singletons with false merges:  192 / 2,130 (9.0%)
+
+## 5. Matched Entity Performance
+  Matched entities F_0.5 >= 0.5: 22,488 / 22,870 (98.3%)
+  Matched entities F_0.5 < 0.5:  382 / 22,870 (1.7%)
+
+## 6. Per-Entity F_0.5 Distribution
+  Mean:   0.9457
+  Median: 1.0000
+  Std:    0.1558
+  Min:    0.0000
+  Max:    1.0000
+
+  Score distribution:
+    F_0.5 = 1.0 (perfect):       1,938 (7.8%)
+    F_0.5 >= 0.8:                 23,035 (92.1%)
+    F_0.5 >= 0.5:                 24,426 (97.7%)
+    F_0.5 = 0.0 (total miss):    469 (1.9%)
+
+## 7. Error Analysis
+  Top false positive entities (most wrong merges):
+    S1-387668582: 5 FP, 2 TP, F_0.5=0.333
+    S1-407769671: 4 FP, 1 TP, F_0.5=0.238
+    S1-314734796: 4 FP, 2 TP, F_0.5=0.385
+    S1-322795605: 4 FP, 0 TP, F_0.5=0.000
+    S1-542079871: 4 FP, 3 TP, F_0.5=0.484
+    S1-316183603: 4 FP, 4 TP, F_0.5=0.541
+    S1-734046557: 4 FP, 2 TP, F_0.5=0.370
+    S1-22512013: 3 FP, 3 TP, F_0.5=0.556
+    S1-336077367: 3 FP, 1 TP, F_0.5=0.294
+    S1-772683654: 3 FP, 1 TP, F_0.5=0.294
+
+  Top false negative entities (most missed matches):
+    S1-305382530: 5 FN, 2 TP, F_0.5=0.667
+    S1-665547759: 5 FN, 1 TP, F_0.5=0.500
+    S1-917119218: 5 FN, 1 TP, F_0.5=0.357
+    S1-857396898: 4 FN, 2 TP, F_0.5=0.714
+    S1-49364728: 4 FN, 2 TP, F_0.5=0.714
+    S1-166638726: 4 FN, 0 TP, F_0.5=0.000
+    S1-182182631: 4 FN, 0 TP, F_0.5=0.000
+    S1-371768559: 4 FN, 1 TP, F_0.5=0.556
+    S1-300511060: 4 FN, 1 TP, F_0.5=0.556
+    S1-164753624: 4 FN, 1 TP, F_0.5=0.556
+
+================================================================================

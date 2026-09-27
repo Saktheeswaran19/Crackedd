@@ -1,0 +1,169 @@
+# ==============================================================================
+# Amazon ML Challenge 2026 — Root .gitignore
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Virtual Environments (Proper Location)
+# ------------------------------------------------------------------------------
+student_resource/.venv/
+.venv/
+venv/
+ENV/
+env/
+
+# ------------------------------------------------------------------------------
+# 2. Dataset Directories (Proper Location — ~3.2 GB Total)
+# ------------------------------------------------------------------------------
+student_resource/dataset/
+student_resource/dataset/train/
+student_resource/dataset/test/
+dataset/
+**/dataset/
+
+# ------------------------------------------------------------------------------
+# 3. Output Directory (Proper Location — Final Scored Submissions)
+# ------------------------------------------------------------------------------
+student_resource/output/
+output/
+**/output/
+
+# ------------------------------------------------------------------------------
+# 4. LARGE FILES > 100 MB (Strictly Excluded with Exact Paths)
+# ------------------------------------------------------------------------------
+# These files exceed GitHub's 100 MB hard limit and will cause git push rejections:
+student_resource/code/business_entity_resolution/src/train_candidate_pairs.tsv        # ~598.6 MB
+student_resource/dataset/test/test_source2.tsv                                        # ~485.9 MB
+student_resource/dataset/test/test_source3.tsv                                        # ~482.6 MB
+student_resource/dataset/train/train_source3.tsv                                      # ~480.4 MB
+student_resource/output/candidate_pairs.tsv                                           # ~472.5 MB
+student_resource/dataset/train/train_source2.tsv                                      # ~466.6 MB
+student_resource/code/business_entity_resolution/src/train_candidate_pairs_US.tsv     # ~354.0 MB
+student_resource/code/business_entity_resolution/src/train_features.tsv               # ~267.9 MB
+student_resource/code/business_entity_resolution/src/train_candidate_pairs_India.tsv  # ~244.6 MB
+student_resource/code/business_entity_resolution/src/test_candidate_pairs_India.tsv   # ~224.2 MB
+student_resource/dataset/train/train_source1.tsv                                      # ~200.3 MB
+student_resource/code/business_entity_resolution/src/test_candidate_pairs_US.tsv      # ~176.4 MB
+student_resource/dataset/test/test_source1.tsv                                        # ~166.9 MB
+student_resource/dataset/train/train_ground_truth.tsv                                 # ~121.1 MB
+
+# ------------------------------------------------------------------------------
+# 5. EVERY .tsv FILE INSIDE student_resource/ (Exact Explicit Paths)
+# ------------------------------------------------------------------------------
+# Raw Training Set:
+student_resource/dataset/train/train_source1.tsv
+student_resource/dataset/train/train_source2.tsv
+student_resource/dataset/train/train_source3.tsv
+student_resource/dataset/train/train_ground_truth.tsv
+
+# Raw Test Set:
+student_resource/dataset/test/test_source1.tsv
+student_resource/dataset/test/test_source2.tsv
+student_resource/dataset/test/test_source3.tsv
+
+# Candidate Pairs (Blocking Outputs):
+student_resource/code/business_entity_resolution/src/train_candidate_pairs.tsv
+student_resource/code/business_entity_resolution/src/train_candidate_pairs_India.tsv
+student_resource/code/business_entity_resolution/src/train_candidate_pairs_US.tsv
+student_resource/code/business_entity_resolution/src/test_candidate_pairs_France.tsv
+student_resource/code/business_entity_resolution/src/test_candidate_pairs_India.tsv
+student_resource/code/business_entity_resolution/src/test_candidate_pairs_US.tsv
+
+# Engineered Feature Matrices:
+student_resource/code/business_entity_resolution/src/train_features.tsv
+student_resource/code/business_entity_resolution/src/val_features.tsv
+
+# Intermediate Match Results:
+student_resource/code/business_entity_resolution/src/test_matching_results_France.tsv
+student_resource/code/business_entity_resolution/src/test_matching_results_India.tsv
+student_resource/code/business_entity_resolution/src/test_matching_results_US.tsv
+
+# Validation Error Details:
+student_resource/code/business_entity_resolution/src/validation_report_details.tsv
+
+# Final Output Submissions:
+student_resource/output/candidate_pairs.tsv
+student_resource/output/matching_results.tsv
+
+# Global catch-all for any other .tsv files
+*.tsv
+
+# ------------------------------------------------------------------------------
+# 6. Generated Intermediate Files & Models (student_resource)
+# ------------------------------------------------------------------------------
+student_resource/code/business_entity_resolution/src/split_train_s1_ids.txt           # ~23.4 MB
+student_resource/code/business_entity_resolution/src/split_val_s1_ids.txt             # ~5.9 MB
+student_resource/code/business_entity_resolution/src/model.lgb                         # ~6.6 MB
+
+split_train_s1_ids.txt
+split_val_s1_ids.txt
+*.lgb
+
+# ------------------------------------------------------------------------------
+# 7. Python Artifacts & Caches
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ------------------------------------------------------------------------------
+# 8. Environment Variables & Secrets
+# ------------------------------------------------------------------------------
+.env
+.env.*
+*.env
+secrets.json
+secrets.yaml
+*.pem
+*.key
+*.pfx
+
+# ------------------------------------------------------------------------------
+# 9. OS-Specific Metadata
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ------------------------------------------------------------------------------
+# 10. IDE & Editor Artifacts
+# ------------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# ------------------------------------------------------------------------------
+# 11. Jupyter Notebooks & Tests
+# ------------------------------------------------------------------------------
+.ipynb_checkpoints/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# ------------------------------------------------------------------------------
+# 12. Build & Packaging Artifacts
+# ------------------------------------------------------------------------------
+build/
+dist/
+*.egg-info/
+*.egg
+
+# ------------------------------------------------------------------------------
+# 13. Logs & Vector Indices
+# ------------------------------------------------------------------------------
+*.log
+resource_monitor.log
+full_run_output.log
+*.faiss
+.chroma/
